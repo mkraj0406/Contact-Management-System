@@ -6,26 +6,27 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-
 <style type="text/css">
-*body{
+
+body{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    /* background-color: rgba(54, 21, 21, 0.461); */
 }
 #navbarConatiner{
-    border: 2px solid red;
+    border: 2px solid rgb(9, 9, 9);
+    /* border-bottom:2px solid rgb(9, 9, 9); */
     height: 60px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content:space-between;
-    background-color: rgba(54, 21, 21, 0.461);
-    color: whitesmoke;
-
+    background-color: rgb(142 93 93 / 72%);
+    
 }
 .Logo{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     height: 90%;
     width: 30%;
     display: flex;
@@ -34,8 +35,12 @@
     font-size: 200%;
     text-decoration: none;
 }
+.Logo a{
+    text-decoration: none;
+    color: whitesmoke;
+}
 .navbar-menu{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     height: 90%;
     width: 60%;
     display: flex;
@@ -46,16 +51,14 @@
 }
 #navbarConatiner ul li a{
     text-decoration: none;
-    font-size: 240%;
+    font-size: 150%;
     color: whitesmoke;
 }
 #navbarConatiner ul li a:hover{
     color: red;
     background-color: rgba(0, 0, 255, 0.192);
 }
-
-}
-</style>
+</style> 
 
 </head>
 <body>
@@ -64,6 +67,7 @@
 	<nav id="navbarConatiner">
 		<div class="Logo"><a href="home.jsp">Contact Management System</a></div>
 		<ul class="navbar-menu">
+		<li><a href="home.jsp">Home</a></li>
 			<li><a href="register.jsp">Register</a></li>
 			
 			<%if(user1!=null){ %>
@@ -71,6 +75,7 @@
 			<%}else{%>
 			<li><a href="login.jsp">Login</a></li>
 			<%}%> 
+			<li><a href="#">About</a></li>
 		</ul>
 
 	</nav>

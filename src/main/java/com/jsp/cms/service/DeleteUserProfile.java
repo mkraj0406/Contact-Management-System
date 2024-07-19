@@ -20,9 +20,8 @@ public class DeleteUserProfile extends HttpServlet {
 		User user = (User) req.getSession().getAttribute("user");
 		
 		boolean result=DaoSingleton.getUserDao().deleteUserById(user);
-		if(result) {
-			req.setAttribute("user", user);
-			req.getRequestDispatcher("home.jsp").forward(req, resp);
+		if(result){
+			resp.sendRedirect("home.jsp");
 		}
 	}
 }

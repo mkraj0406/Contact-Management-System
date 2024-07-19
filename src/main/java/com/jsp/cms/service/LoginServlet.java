@@ -30,7 +30,7 @@ public class LoginServlet extends HttpServlet{
 			req.getRequestDispatcher("home.jsp").forward(req, resp);
 		}else {
 			req.setAttribute("error", "Failed to Login Please Type Valid email or passowrd!!");
-			req.getRequestDispatcher("login.jsp");
+			req.getRequestDispatcher("login.jsp").forward(req, resp);;
 		}
 	}
 }

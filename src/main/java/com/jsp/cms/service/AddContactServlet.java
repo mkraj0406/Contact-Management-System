@@ -32,6 +32,7 @@ public class AddContactServlet extends HttpServlet {
 		}else {
 			req.setAttribute("error", "Please enter valid contact Deatails");
 		}
+		
 
 	}
 }

@@ -18,7 +18,7 @@
 	<%}%>
 	
 	<div>
-		<table border="2px">
+		<table border="2" cellpadding="10px" cellspacing="2px" bordercolor="red" bgcolor="pink">
 			<tr>
 				<td><%=user.getUsername()%></td>
 				<td><%=user.getEmail()%></td>

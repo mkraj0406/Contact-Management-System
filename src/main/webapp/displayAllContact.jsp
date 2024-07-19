@@ -3,19 +3,30 @@
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ include file="navbar.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+<style type="text/css">
+body{
+background-color: rgba(54, 21, 21, 0.461); 
+display: flex;
+align-items: center;
+flex-direction: column;
+}
+
+</style>
 </head>
 <body>
 
 <%List<Contact>  contacts = (List<Contact>)request.getAttribute("resultset");%>
 	<%Iterator<Contact> contact = contacts.iterator();%>
 	
-	
-  <table border="2" cellpadding="10px" cellspacing="2px" bordercolor="red" bgcolor="pink">
+	<h1>Contact List:</h1>
+  <table border="2" cellpadding="10px" cellspacing="2px" bordercolor="black" bgcolor="">
 		<tr>
 			<th>contactName</th>
 			<th>contactNumber</th>
@@ -33,6 +44,6 @@
 		</tr>
 	</table>
 	
-	<h1><a href="home.jsp">Go Back to Dashborad:-</a></h1>
+	<h1><a href="home.jsp"  style="color: white; border: 2px solid black; border-radius: 5px; background-color: grey" >Go Back to Dashborad:-</a></h1>
 </body>
 </html>

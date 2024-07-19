@@ -12,9 +12,10 @@
 	User user = (User) session.getAttribute("user");
 	%>
 	
-	<form action="updateProfile?user=<%=user%>" method="post">
+	<form action="updateProfile" method="post">
 		<input type="text" name="username" value="<%=user.getUsername()%>"><br>
 		<input type="email" name="email" value="<%=user.getEmail()%>"><br>
+		<input type="password" value="<%=user.getPassword()%>">
 		<input type="submit" value="UPDATE">
 	</form>
 
